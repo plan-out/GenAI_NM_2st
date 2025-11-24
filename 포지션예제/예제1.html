@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예제1</title>
+  <style>
+    *{margin:0; padding:0; font-size:0;}
+
+    body{
+      background-color:#F5EDE3;
+      /*background-image:url("img1/chicken.png");*/
+      background-repeat:no-repeat;
+      background-position:right top;
+
+    }
+
+    #chicken{
+      width:331px; height:283px;
+      background:url("img1/face.png") no-repeat;
+      position:absolute;
+      left:50%; top:50%;
+      margin:-141.5px 0 0 -165.5px;
+    }    
+    .hair{position:absolute; top:-120px; left:90px;}
+    .eye{position:absolute; top:135px; left:94px;}
+    .flush{position:absolute; top:173px; left:78px;}
+    .poc{position:absolute; top:177px; left:147px;
+      /*기준점 변경*/
+      transform-origin:center top;
+    }
+    .beak{position:absolute; top:146px; left:129px;}
+
+    p{
+      transition:all 0.4s;
+      /*transition:all(모든속성) 동작시간 [속도] [지연시간]*/
+    }
+
+    #chicken:hover .hair{
+      /*변형(p218)*/
+      transform:translate(10px,-20px);/*위치이동(수평이동, 수직이동)*/
+      /*translateX():수평이동, translateY():수직이동*/
+    }
+    #chicken:hover .beak{
+      /*크기조절(너비비,높이비)*/
+      transform:scale(1, 2);
+      /*scaleX():너비만, scaleY():높이만*/
+    }
+    #chicken:hover .poc{
+      /*회전(각도)*/
+      transform:rotate(-45deg);
+    }
+    #chicken:hover .eye{
+      /*기울리기(각도)*/
+      transform:skewX(60deg);
+      /*skew(수평축,수직축), skewY():수직축기울리기*/
+    }
+  </style>
+</head>
+<body>
+  <div id="chicken">
+    <p class="hair"><img src="./img1/hair.png" alt=""></p>
+    <p class="eye"><img src="./img1/eye.png" alt=""></p>
+    <p class="flush"><img src="./img1/flush.png" alt=""></p>
+    <p class="poc"><img src="./img1/poc.png" alt=""></p>
+    <p class="beak"><img src="./img1/beak.png" alt=""></p>
+  </div>
+
+</body>
+</html>

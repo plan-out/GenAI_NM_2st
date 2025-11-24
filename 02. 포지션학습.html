@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. 포지션학습</title>
+    <style>
+        body{height:3000px;}
+
+        div{width:200px; height:100px;
+            border:1px solid #000; background:#999;
+            color:#fff; font-size:24px;}
+
+        #b{background:#f00;
+            position:fixed;
+            top:120px; left:120px;
+            z-index:-2;}    
+
+        #d{background:#0f0;
+            position:absolute;
+            top:60px; left:60px;
+            z-index:1;}    
+
+        #f{background:#00f;
+            position:absolute;
+            top:90px; left:90px;}    
+
+        #h{background:#ff0;
+            position:relative;
+            top:30px; left:30px;}  
+
+        #j{background:#0ff;
+            position:sticky;
+            top:30px; left:30px;}    
+    </style>
+</head>
+<body>
+    <!--
+    position학습(p246-269)
+
+    😁 언제 사용하는 가?
+    (1) 영역이 다른 영역과 겹쳐서 표시되는 경우
+    (2) 화면에 영역을 고정시켜야 되는 경우
+    (3) 레이아웃을 무시하고, 원하는 곳에 배치해야하는 경우
+
+    😂 속성값에 따른 배치방식
+    :static; -> (기본값) block요소는 수직정렬, inline요소는 수평정렬
+    :absolute; -> 상위포지션 기준 배치,
+                  상위포지션이 없는 경우, 화면 기준 배치
+    :relative; -> 원래위치 기준 배치 / 상위포지션의 용도로 많이 활용됨.
+    :fixed; -> 화면 기준 배치, 화면에 고정됨.
+    :sticky; -> 영역이 화면위로 넘어가면, 화면에 고정됨.
+
+    😴 상위포지션 : 상위요소(조상요소)중에서 포지션이 설정된 가까운 요소
+
+    😶 위치를 지정하는 속성
+    [top], [left], [right], [bottom]
+
+    😥 겹쳐진 순서의 제어
+    [z-index]
+    -->
+    <div id="a">a</div>
+    <div id="b">b(fixed)</div>
+    <div id="c">c</div>
+    <div id="d">d(absolute)</div>
+    <div id="e">e</div>
+    <div id="f">f(absolute)</div>
+    <div id="g">g</div>
+    <div id="h">h(relative)</div>
+    <div id="i">i</div>
+    <div id="j">j(sticky)</div>
+    <div id="k">k</div>
+</body>
+</html>
