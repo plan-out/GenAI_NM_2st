@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04. flex 학습하기</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    #container{
+      width:80%; height:400px;
+      border:5px solid #000;
+      display:flex; /*inline-flex*/
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+    }
+    #container div{border:2px solid #f00;
+      background:#ffc;}
+
+    .item1{}  
+    .item2{align-self:stretch;}  
+    .item3{order:-1;}  
+    .item4{z-index:2;}  
+
+  </style>
+</head>
+<body>
+  <section id="container">
+    <div class="item1">Item-box-1</div>
+    <div class="item2">Item-box-2</div>
+    <div class="item3">Item-box-3</div>
+    <div class="item4">Item-box-4</div>
+  </section>
+  
+</body>
+</html>

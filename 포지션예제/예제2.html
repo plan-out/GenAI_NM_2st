@@ -4,18 +4,87 @@
     <meta charset="utf-8">
     <title>예제2</title>
     <style>
-    *{margin:0; padding:0;}
-    img{vertical-align:top;}
+      *{margin:0; padding:0; font-size:0;}
 
-    body{background:url("img2/dog.png") no-repeat right top #F5EDE3;}
-    div{outline:1px solid #000;}
-    #face{width:554px; margin:300px auto 0;}
+      @keyframes bg{
+        from{background:#2daaf1}
+        to{background:#fff893}
+      }
+
+      body{
+        background:#96ffb1;
+        animation-name:bg;/*애니메이션 지정*/
+        animation-duration:5s;/*재생시간*/
+        animation-timing-function:ease;/*속도*/
+        animation-delay:3s;/*대기시간*/
+        animation-iteration-count:infinite;/*반복횟수*/
+          /*infinite:무한반복*/
+        animation-direction:alternate;/*재생방향*/
+          /*normal(정재생), reverse(역재생)
+            alternate(정-역), alternate-reverse(역-정)*/
+        animation-fill-mode:both;/*대기중/완료후 스타일 적용*/
+          /*forwards(완료후), backwards(대기중), both(둘다)*/
+      }
+
+      #dog{
+        width:554px; height:462px;
+        background:url("./img2/face.png") no-repeat;
+        position:absolute;
+        top:50%; left:50%;
+        margin:-231px 0 0 -277px;
+      }
+      #dog p{position:absolute;}
+      @keyframes ear_l_ani {
+        0%{transform:rotate(0);}
+        10%{transform:rotate(15deg);}
+        20%{transform:rotate(0);}
+        30%{transform:rotate(15deg);}
+        40%{transform:rotate(0);}
+      }
+      @keyframes ear_r_ani {
+        0%{transform:rotate(0);}
+        10%{transform:rotate(-15deg);}
+        20%{transform:rotate(0);}
+        30%{transform:rotate(-15deg);}
+        40%{transform:rotate(0);}
+      }
+      .ear_l{top:-105px; left:20px; z-index:-1;
+        animation:ear_l_ani 1s infinite alternate;
+        transform-origin:center bottom;}
+      .ear_r{top:-105px; right:20px;z-index:-1;        
+        animation:ear_r_ani 1s infinite alternate;
+        transform-origin:center bottom;} 
+      .jaw{bottom:0px; left:9px;}
+      .eye_l{top:230px; left:125px;}
+      .eye_r{top:230px; right:125px;}
+      .flush_l{top:275px; left:120px;}
+      .flush_r{top:275px; right:120px;}
+
+      @keyframes nose_ani {
+        to{transform:translateY(10px)}
+      }
+      
+      .nose{top:230px; left:240px;
+        animation:nose_ani 0.5s infinite alternate;}
+
+      .mouth{top:260px; left:244px;}
+      .shadow{bottom:0px; right:0px;}
+
 
     </style>
   </head>
   <body>
-    <div id="face">
-      <p><img src="img2/face.png"/></p>
+    <div id="dog">
+      <p class="ear_l"><img src="./img2/ear_left_out.png"></p>
+      <p class="ear_r"><img src="./img2/ear_right_out.png"></p>
+      <p class="jaw"><img src="./img2/jaw.png"></p>
+      <p class="eye_l"><img src="./img2/eye_left.png"></p>
+      <p class="eye_r"><img src="./img2/eye_right.png"></p>
+      <p class="flush_l"><img src="./img2/flush_left.png"></p>
+      <p class="flush_r"><img src="./img2/flush_right.png"></p>
+      <p class="nose"><img src="./img2/nose.png"></p>
+      <p class="mouth"><img src="./img2/mouth.png"></p>
+      <p class="shadow"><img src="./img2/shadow.png"></p>
     </div>
   </body>
 </html>

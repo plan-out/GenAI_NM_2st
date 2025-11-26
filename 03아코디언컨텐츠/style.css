@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*리셋코드*/
+*{margin:0; padding:0;}
+
+main{width:100%; height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#accordian{width:90%; height:50%;
+  display:flex;
+  border:5px solid #00f;}
+
+#accordian label{display:block; width:11%;
+  border-radius:12px; background:#ff0;
+  transition:all .3s;}
+
+#accordian input:checked + label{
+  flex-grow:1;
+}  
