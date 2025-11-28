@@ -3,20 +3,26 @@
 /*리셋코드*/
 *{margin:0; padding:0;}
 
-main{width:100%; height:100vh;
+main{height:100vh; /*화면높이기준 비율*/
   display:flex;
   justify-content:center;
-  align-items:center;
-}
+  align-items:center;}
 
 #accordian{width:90%; height:50%;
-  display:flex;
+  display:flex; gap:1%;
   border:5px solid #00f;}
 
+#accordian input{display:none;} 
+
 #accordian label{display:block; width:11%;
-  border-radius:12px; background:#ff0;
-  transition:all .3s;}
+  transition:all .3s;
+  background:#cfc;}  
 
 #accordian input:checked + label{
-  flex-grow:1;
-}  
+  flex-grow:1;} 
+
+#accordian .tab_img{width:100%; height:100%;}  
+
+#accordian .tab_img img{width:100%; height:100%;
+  object-fit:cover;/*이미지나 비디오의 정비율유지*/
+}
