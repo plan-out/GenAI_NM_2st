@@ -11,13 +11,59 @@
     <h1 id="logo"><a href="#"><img src="./images/logo.png" alt="JUST쇼핑몰"></a></h1>
     <nav id="gnb"><!--global navigation bar-->
       <ul>
-        <li class="l1"><a href="#">탑</a></li>
-        <li class="l1"><a href="#">아우터</a></li>
-        <li class="l1"><a href="#">팬츠</a></li>
-        <li class="l1"><a href="#">악세사리</a></li>
+        <li class="l1"><a href="#">탑</a>
+          <ul class="sub">
+            <li><a href="#">블라우스</a></li>
+            <li><a href="#">티</a></li>
+            <li><a href="#">셔츠</a></li>
+            <li><a href="#">니트</a></li>
+          </ul>
+        </li>
+        <li class="l1"><a href="#">아우터</a>
+          <ul class="sub">
+            <li><a href="#">자켓</a></li>
+            <li><a href="#">코트</a></li>
+            <li><a href="#">가디건</a></li>
+            <li><a href="#">머플러</a></li>
+          </ul>
+        </li>
+        <li class="l1"><a href="#">팬츠</a>
+          <ul class="sub">
+            <li><a href="#">청바지</a></li>
+            <li><a href="#">짧은바지</a></li>
+            <li><a href="#">긴바지</a></li>
+            <li><a href="#">레깅스</a></li>
+          </ul>
+        </li>
+        <li class="l1"><a href="#">악세사리</a>
+          <ul class="sub">
+            <li><a href="#">귀고리</a></li>
+            <li><a href="#">목걸이</a></li>
+            <li><a href="#">반지</a></li>
+            <li><a href="#">팔찌</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
+
+  <main>
+    <div id="slide">
+      <ul>
+        <li><img src="./images/main1.png" alt="[홀딱빠진] 프리미엄 데님라인 홀딱빠진 예뻐서 한 번 빠지고 편해서 한 번더 빠졌다.!"></li>
+        <li><img src="./images/main2.png" alt="[틴틴]틴에이저 FREE SIZE스타일, 핏, 트렌디함까지 딱! 매일매일 즐거운 스타일링~"></li>
+        <li><img src="./images/main3.png" alt="[애슬러블]애슬레저라인 애슬러블 바로 지금, 마음껏 뛰어 놀 시간!"></li>
+      </ul>
+    </div><!--end:#slide-->
+    <div id="tab">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1">공지사항</label>
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2">갤러리</label>
+      <div id="notice">공지사항내용</div><!--end:#notice-->
+      <div id="gallery">갤러리내용</div><!--end:#gallery-->
+    </div><!--end:#tab-->
+  </main>
 
 
   <!--js문서들 맨마지막 연결 -->
