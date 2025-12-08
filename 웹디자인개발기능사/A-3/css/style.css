@@ -32,11 +32,32 @@ header{width:1200px; height:100px; margin:0 auto;
   line-height:36px; background:#ddd; color:#333;}
 #gnb .list .sub a:hover{background:var(--sub); color:#fff;}
 
-main{width:1200px; height:500px; margin:0 auto;
-  border:10px solid #000;}
+main{width:1200px; height:500px; margin:0 auto;}
 
-#slide{width:1200px; height:300px; position:relative;
-  outline:3px solid #f00;} 
+#slide{width:1200px; height:300px; position:relative;} 
 #slide li{position:absolute; top:0; left:0;}  
 #slide li:nth-child(2),
 #slide li:nth-child(3){display:none;}
+
+#contents{width:1200px; height:200px;  
+  display:flex; justify-content:space-between;
+  align-items:center;
+  background:#ff0;}
+
+#tab{width:380px; height:180px; background:#cff;}  
+#tab input{display:none;}
+#tab label{display:inline-block; background:#666;
+  padding:0 10px; height:30px; line-height:30px;
+  color:#fff; cursor:pointer;}
+#tab input:checked + label{background:var(--main);}
+
+#tab > div{width:100%; height:150px;
+  border:5px solid var(--main);
+  box-sizing:border-box; display:none;}
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery{display:block;}  
+
+
+#banner{width:380px; height:180px; background:#fcf;}  
+
+#link{width:380px; height:180px; background:#cff;}  
