@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/*리셋코드*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:top;}
+a{text-decoration:none;}
+
+:root{
+  font-size:12px; line-height:1.4; color:#333;
+  --main:#e3950e;
+  --sub:#15422c;
+}
+
+header{background:#a3f8d7;}
+header .inner{width:1200px; height:100px; margin:0 auto;
+  border:1px solid #f00;}
