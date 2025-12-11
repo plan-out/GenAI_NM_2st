@@ -14,4 +14,26 @@ a{text-decoration:none;}
 
 header{background:#a3f8d7;}
 header .inner{width:1200px; height:100px; margin:0 auto;
-  border:1px solid #f00;}
+  display:flex; justify-content:space-between;
+  align-items:center;}
+
+#gnb > ul{display:flex;}
+#gnb .list{width:160px; text-align:center; position:relative;}
+#gnb .list > a{display:block; height:40px; line-height:40px;
+  font-size:20px; font-weight:bold; color:var(--main);
+  border:2px solid var(--main);}
+#gnb .list:nth-child(1n+2) > a{border-left:0;}  
+#gnb .list:hover > a{background:var(--main); color:#fff;}
+
+#gnb .list .sub{position:absolute; width:100%;
+  opacity:0; visibility:hidden; transition:all .4s;
+  height:144px; background:#ddd;}
+#gnb:hover .list .sub{opacity:1; visibility:visible;}
+  
+#gnb .list .sub a{display:block; font-size:16px;
+  line-height:36px; background:#ddd; color:#333;}
+#gnb .list .sub a:hover{background:var(--sub); color:#fff;}  
+
+main{width:1200px; height:500px; margin:0 auto;
+  border:5px solid #000;}
+
